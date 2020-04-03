@@ -10,7 +10,7 @@ namespace HMW.Core.Persistence
     public class OrganizationRepo : IOrganizationRepo
     {
         // TODO: move to config and inject into constructor
-        private string connstr = "mongodb+srv://as-app:gvWJVEAjVcSv8ufl@automatedstaffing-uvvp2.mongodb.net/test?retryWrites=true&w=majority";
+        private string connstr = "";
         private const string DATABASE_NAME = "automatedstaffing";
         private const string COLLECTION_NAME = "Organizations";
 
