@@ -1,0 +1,2 @@
+# auto-staff
+Automated staffing
