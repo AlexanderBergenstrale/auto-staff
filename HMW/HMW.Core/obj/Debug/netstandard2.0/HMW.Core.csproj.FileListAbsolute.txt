@@ -1,0 +1,9 @@
+C:\Users\Johan\dev\auto-staff\HMW\HMW.Core\bin\Debug\netstandard2.0\HMW.Core.deps.json
+C:\Users\Johan\dev\auto-staff\HMW\HMW.Core\bin\Debug\netstandard2.0\HMW.Core.dll
+C:\Users\Johan\dev\auto-staff\HMW\HMW.Core\obj\Debug\netstandard2.0\HMW.Core.csprojAssemblyReference.cache
+C:\Users\Johan\dev\auto-staff\HMW\HMW.Core\obj\Debug\netstandard2.0\HMW.Core.AssemblyInfoInputs.cache
+C:\Users\Johan\dev\auto-staff\HMW\HMW.Core\obj\Debug\netstandard2.0\HMW.Core.AssemblyInfo.cs
+C:\Users\Johan\dev\auto-staff\HMW\HMW.Core\bin\Debug\netstandard2.0\HMW.Core.pdb
+C:\Users\Johan\dev\auto-staff\HMW\HMW.Core\obj\Debug\netstandard2.0\HMW.Core.csproj.CoreCompileInputs.cache
+C:\Users\Johan\dev\auto-staff\HMW\HMW.Core\obj\Debug\netstandard2.0\HMW.Core.dll
+C:\Users\Johan\dev\auto-staff\HMW\HMW.Core\obj\Debug\netstandard2.0\HMW.Core.pdb
