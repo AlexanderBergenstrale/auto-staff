@@ -8,7 +8,7 @@ namespace HMW.Core.Interfaces
     public interface IOrganizationRepo
     {
         IList<Organization> GetAll();
-        Organization Get(int Id);
+        Organization Get(string id);
         void Save(Organization organization);
     }
 }

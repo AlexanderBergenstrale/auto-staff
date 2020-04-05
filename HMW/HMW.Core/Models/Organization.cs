@@ -2,9 +2,8 @@
 
 namespace HMW.Core.Models
 {
-    public class Organization
+    public class Organization : ModelBase
     {
-        public int Id { get; set; }
         public string Name { get; set; }
     }
 }

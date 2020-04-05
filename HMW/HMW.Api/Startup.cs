@@ -27,9 +27,19 @@ namespace HMW.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // getting config from Configuration file.
+            // using UserSecrets to store db connection string
+            // ie, in secrets.json add a row like this "DbConfig:ConnectionString" : "<value>"
+            var dbConfig = Configuration.GetSection("DbConfig").Get<DbConfig>();
             services.AddControllers();
 
+            services.AddScoped<IDbConfig>((services) =>
+            {
+                return dbConfig;
+            });
+
             services.AddScoped<IOrganizationRepo, OrganizationRepo>();
+            services.AddScoped<IEmployeeRepo, EmployeeRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

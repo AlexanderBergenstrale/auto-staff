@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HMW.Core.Models
 {
-    public class Worker
+    public class Employee : ModelBase
     {
-        public int Id { get; set; }
+        public string OrganizationId { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public IEnumerable<Skill> Skills { get; set; }
