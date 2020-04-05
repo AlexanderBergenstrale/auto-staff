@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.3.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\HMW.Core\HMW.Core.csproj" />
     <ProjectReference Include="..\HMW.Persistence\HMW.Persistence.csproj" />
   </ItemGroup>

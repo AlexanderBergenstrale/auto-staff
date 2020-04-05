@@ -35,11 +35,26 @@ namespace HMW.Api
             services.AddScoped<IOrganizationRepo, OrganizationRepo>();
             services.AddScoped<IEmployeeRepo, EmployeeRepo>();
             services.AddScoped<IHealthReportRepo, HealthReportRepo>();
+
+
+            //swagger
+            services.AddSwaggerGen((opt) =>
+            {
+                opt.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "AutoStaff.Api", Version = "V1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // swagger
+            app.UseSwagger();
+            app.UseSwaggerUI((opt) =>
+            {
+                opt.SwaggerEndpoint("/swagger/v1/swagger.json", "AutoStaff Api v1");
+                opt.RoutePrefix = string.Empty;
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
