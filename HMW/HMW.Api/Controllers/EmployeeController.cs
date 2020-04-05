@@ -60,5 +60,12 @@ namespace HMW.Api.Controllers
         {
             return repo.GetByOrganizationId(id);
         }
+
+        [HttpPost("/employee/{id}/absence")]
+        public void SetAbsence(string id, Absence model)
+        {
+
+        }
+
     }
 }
