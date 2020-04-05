@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using HMW.Core;
 using HMW.Core.Interfaces;
 using HMW.Core.Models;
+using HMW.Core.Notifications.Absence;
+using HMW.Core.Requests;
+using HMW.Core.Requests.Employee;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -16,55 +19,42 @@ namespace HMW.Api.Controllers
     {
 
         private readonly ILogger<EmployeeController> _logger;
-        private readonly IEmployeeRepo repo;
-        private readonly IOrganizationRepo orgRepo;
+        private readonly IDispatcher dispatcher;
 
-        public EmployeeController(ILogger<EmployeeController> logger, IEmployeeRepo repo, IOrganizationRepo orgRepo)
+        public EmployeeController(ILogger<EmployeeController> logger, IDispatcher dispatcher)
         {
             _logger = logger;
-            this.repo = repo;
-            this.orgRepo = orgRepo;
-        }
-
-        [HttpGet]
-        public IEnumerable<Employee> Get()
-        {
-            return repo.GetAll();
+            this.dispatcher = dispatcher;
         }
 
         [HttpGet("{id}")]
-        public Employee Get(string id)
+        public Task<Employee> Get(string id)
         {
-            return repo.Get(id);
+            return dispatcher.Send(new GetEmployeeByIdRequest()
+            {
+                Id = id
+            });
         }
 
         [HttpPost]
-        public void Save(Employee employee)
+        public void Save(CreateEmployeeRequest request)
         {
-            // validate the organization exits
-            if (string.IsNullOrEmpty(employee?.OrganizationId))
-            {
-                throw new Exception("OrganizationId is missing");
-            }
-            var org = orgRepo.Get(employee.OrganizationId);
-            if (org == null || string.IsNullOrEmpty(org.Id))
-            {
-                throw new Exception("Invalid organization");
-            }
-
-            repo.Save(employee);
+            dispatcher.Send(request);
         }
 
         [HttpGet("/organization/{id}/employees")]
-        public IEnumerable<Employee> GetEmployeesByOrganizationId(string id)
+        public Task<IList<Employee>> GetEmployeesByOrganizationId(string id)
         {
-            return repo.GetByOrganizationId(id);
+            return dispatcher.Send(new GetEmployeesByOrganizationIdRequest()
+            {
+                OrganizationId = id
+            });
         }
 
         [HttpPost("/employee/{id}/absence")]
-        public void SetAbsence(string id, Absence model)
+        public void SetAbsence(string id, CreateAbsenceNotification notification)
         {
-
+            dispatcher.Dispatch(notification);
         }
 
     }

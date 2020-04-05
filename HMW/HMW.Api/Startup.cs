@@ -1,11 +1,15 @@
+using HMW.Core;
 using HMW.Core.Config;
+using HMW.Core.Handlers.Employee;
 using HMW.Core.Interfaces;
 using HMW.Persistence.Repositories;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Reflection;
 
 namespace HMW.Api
 {
@@ -27,15 +31,21 @@ namespace HMW.Api
             var dbConfig = Configuration.GetSection("DbConfig").Get<DbConfig>();
             services.AddControllers();
 
+            services.AddTransient<IDispatcher, Dispatcher>();
+
             services.AddScoped<IDbConfig>((services) =>
             {
                 return dbConfig;
             });
 
+            // repos
             services.AddScoped<IOrganizationRepo, OrganizationRepo>();
             services.AddScoped<IEmployeeRepo, EmployeeRepo>();
             services.AddScoped<IHealthReportRepo, HealthReportRepo>();
 
+            // handlers
+            //services.AddMediatR(typeof(EmployeeHandler));
+            services.AddMediatR(typeof(EmployeeHandler).GetTypeInfo().Assembly);
 
             //swagger
             services.AddSwaggerGen((opt) =>
