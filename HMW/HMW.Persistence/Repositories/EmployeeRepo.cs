@@ -3,7 +3,7 @@ using HMW.Core.Models;
 using MongoDB.Driver;
 using System.Collections.Generic;
 
-namespace HMW.Core.Persistence
+namespace HMW.Persistence.Repositories
 {
     public class EmployeeRepo : MongoCollectionBase<Employee>, IEmployeeRepo
     {

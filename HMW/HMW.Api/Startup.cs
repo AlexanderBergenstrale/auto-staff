@@ -1,17 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using HMW.Core.Config;
 using HMW.Core.Interfaces;
-using HMW.Core.Persistence;
+using HMW.Persistence.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace HMW.Api
 {
@@ -40,6 +34,7 @@ namespace HMW.Api
 
             services.AddScoped<IOrganizationRepo, OrganizationRepo>();
             services.AddScoped<IEmployeeRepo, EmployeeRepo>();
+            services.AddScoped<IHealthReportRepo, HealthReportRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

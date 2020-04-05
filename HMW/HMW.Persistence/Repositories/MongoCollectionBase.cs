@@ -1,8 +1,9 @@
-﻿using HMW.Core.Models;
+﻿using HMW.Core.Interfaces;
+using HMW.Core.Models;
 using MongoDB.Driver;
 using System.Collections.Generic;
 
-namespace HMW.Core.Persistence
+namespace HMW.Persistence.Repositories
 {
     public class MongoCollectionBase<T> where T : ModelBase
     {

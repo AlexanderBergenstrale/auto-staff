@@ -1,7 +1,7 @@
 ﻿using HMW.Core.Interfaces;
 using HMW.Core.Models;
 
-namespace HMW.Core.Persistence
+namespace HMW.Persistence.Repositories
 {
     public class OrganizationRepo : MongoCollectionBase<Organization>, IOrganizationRepo
     {

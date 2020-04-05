@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMW.Api", "HMW.Api\HMW.Api.csproj", "{56D7CF2F-86D6-48CA-9B94-6445FDC2B959}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HMW.Api", "HMW.Api\HMW.Api.csproj", "{56D7CF2F-86D6-48CA-9B94-6445FDC2B959}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMW.Core", "HMW.Core\HMW.Core.csproj", "{87988C88-9EC0-4AFF-9A57-80253A828E9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HMW.Core", "HMW.Core\HMW.Core.csproj", "{87988C88-9EC0-4AFF-9A57-80253A828E9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sms", "HMW.Sms\Sms.csproj", "{71A03ED8-62C2-48C7-B96B-3F58C8617B72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sms", "HMW.Sms\Sms.csproj", "{71A03ED8-62C2-48C7-B96B-3F58C8617B72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMW.Persistence", "HMW.Persistence\HMW.Persistence.csproj", "{74DFA771-EEE8-427B-B255-C511653DD54E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{71A03ED8-62C2-48C7-B96B-3F58C8617B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71A03ED8-62C2-48C7-B96B-3F58C8617B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71A03ED8-62C2-48C7-B96B-3F58C8617B72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74DFA771-EEE8-427B-B255-C511653DD54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DFA771-EEE8-427B-B255-C511653DD54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DFA771-EEE8-427B-B255-C511653DD54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74DFA771-EEE8-427B-B255-C511653DD54E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
