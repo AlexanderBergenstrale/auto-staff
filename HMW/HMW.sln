@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMW.Api", "HMW.Api\HMW.Api.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMW.Core", "HMW.Core\HMW.Core.csproj", "{87988C88-9EC0-4AFF-9A57-80253A828E9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sms", "HMW.Sms\Sms.csproj", "{71A03ED8-62C2-48C7-B96B-3F58C8617B72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{87988C88-9EC0-4AFF-9A57-80253A828E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87988C88-9EC0-4AFF-9A57-80253A828E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87988C88-9EC0-4AFF-9A57-80253A828E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71A03ED8-62C2-48C7-B96B-3F58C8617B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71A03ED8-62C2-48C7-B96B-3F58C8617B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71A03ED8-62C2-48C7-B96B-3F58C8617B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71A03ED8-62C2-48C7-B96B-3F58C8617B72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
